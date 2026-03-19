@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Clientes</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Clientes Cadastrados</h1>
+    <a href="/cadastro">Cadastrar Novo Cliente</a>
+    <ul>
+        {% for cliente in clientes %}
+            <li>{{ cliente[1] }} - {{ cliente[2] }} - {{ cliente[3] }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
